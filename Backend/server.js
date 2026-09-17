@@ -25,15 +25,33 @@ app.get("/api/users", (req, res) => {
 // api/users/:id
 app.get("/api/users/:id", (req, res) => {
   const id = Number(req.params.id);
-  const user = users.find((user) => {
-    user.id === id;
-  });
+  const user = users.find((user) => user.id === id);
   if (!user) {
     return res.status(404).json({
       message: "User not found",
     });
   }
   res.status(200).json(user);
+});
+
+// post the users data
+app.post("/api/users", (req, res) => {
+  const { name, email, age } = req.body;
+
+  if (!name || !email || !age) {
+    return res.status(400).json({
+      message: "Name, email and age are required",
+    });
+  }
+
+  const newUser = {
+    id: users.length > 0 ? users[users.length - 1].id + 1 : 1,
+    name,
+    email,
+    age,
+  };
+  users.push(newUser);
+  res.status(201).json(newUser);
 });
 app.listen(9000, () => {
   console.log("server is runing on port 9000");
