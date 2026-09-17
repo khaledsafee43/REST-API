@@ -78,6 +78,23 @@ app.put("/api/users/:id", (req, res) => {
 
   res.status(200).json(user);
 });
+
+app.delete("/api/users/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const userIndex = users.findIndex((index) => index.id === id);
+
+  if (userIndex === -1) {
+    return res.status(400).json({
+      message: "user not found",
+    });
+  }
+  const deletedUser = users.splice(userIndex, 1);
+
+  res.status(200).json({
+    message: "User deleted successfully",
+    user: deletedUser[0],
+  });
+});
 app.listen(9000, () => {
   console.log("server is runing on port 9000");
 });
