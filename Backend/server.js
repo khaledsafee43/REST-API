@@ -79,6 +79,7 @@ app.put("/api/users/:id", (req, res) => {
   res.status(200).json(user);
 });
 
+// section blok of code that can delete
 app.delete("/api/users/:id", (req, res) => {
   const id = Number(req.params.id);
   const userIndex = users.findIndex((index) => index.id === id);
