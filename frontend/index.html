@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <span class="user-icon">👤</span>
+        <span>user Management</span>
+      </div>
+      <div class="user-count">User Registered<span>0</span></div>
+    </header>
+    <main class="main">
+      <div class="page-title">
+        <h1>Users</h1>
+        <p>Add and view registered users in the system</p>
+      </div>
+
+      <div class="layout">
+        <section class="card form-card">
+          <h2>Add New User</h2>
+          <form id="userForm">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Sara Sarvari" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="example@gmail.com" />
+            </div>
+            <div class="field">
+              <label for="age">Age</label>
+              <input type="text" id="age" placeholder="24 years old" />
+            </div>
+            <div class="field">
+              <label for="roll">User Roll</label>
+              <select id="roll">
+                <option selected disabled>Select User Roll</option>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn">
+              New User
+            </button>
+          </form>
+        </section>
+        <section class="card list-card">
+          <div class="list-header">
+            <h2>Users not registered</h2>
+            <div class="search-box">
+              <span class="search-icon">🔎</span>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="search by name or email... "
+              />
+            </div>
+          </div>
+
+          <div id="listContainer">
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+            <div class="skeleton-row"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
