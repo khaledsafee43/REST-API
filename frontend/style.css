@@ -572,6 +572,9 @@ body {
 .icon-btn.delete:hover {
   background: #FEF2F2;
 }
+.icon-btn.edit:hover {
+  background: #4ec71e;
+}
  
 
 .empty-state, .error-state {

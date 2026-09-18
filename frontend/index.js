@@ -18,6 +18,23 @@ async function showUsers() {
   }
 }
 
-function displayUsers(user) {}
+function displayUsers(users) {
+  listContainer.innerHTML = users.map(user=>{
+    return `
+    <div class="user-row">
+        <div class="user-info">
+          <div class="user-name">${user.name}</div>
+          <div class="user-email">${user.email}</div>
+        </div>
+        <span class="badge"></span>
+        <span class="row-date"></span>
+        <div class="row-actions">
+          <button class="icon-btn edit" title="edit" data-action="edit" data-id="${user.id}">🖊️</button>
+          <button class="icon-btn delete" title="remove" data-action="delete" data-id="${user.id}">🗑️</button>
+        </div>
+    </div>
+    `
+  }).join('')
+}
 
-getUsers();
+showUsers();
