@@ -12,7 +12,7 @@
         <span class="user-icon">👤</span>
         <span>user Management</span>
       </div>
-      <div class="user-count">User Registered<span>0</span></div>
+      <div class="user-count">User Registered <span style="margin-left: 5px;">0</span></div>
     </header>
     <main class="main">
       <div class="page-title">
@@ -22,8 +22,8 @@
 
       <div class="layout">
         <section class="card form-card">
-          <h2>Add New User</h2>
           <form id="userForm">
+            <h2>Add New User</h2>
             <div class="field">
               <label for="fullName">Full Name</label>
               <input type="text" id="fullName" placeholder="Sara Sarvari" />
@@ -62,6 +62,18 @@
             </div>
           </div>
           <div id="listContainer">
+                <div class="user-row">
+        <div class="user-info">
+          <div class="user-name">${user.name}</div>
+          <div class="user-email">${user.email}</div>
+        </div>
+        <span class="badge ${badgeClass}">${badgeText}</span>
+        <span class="row-date">${user.createdAt}</span>
+        <div class="row-actions">
+          <button class="icon-btn edit" title="edit" data-action="edit" data-id="${user.id}">🖊️</button>
+          <button class="icon-btn delete" title="remove" data-action="delete" data-id="${user.id}">🗑️</button>
+        </div>
+    </div>
             <div class="skeleton-row"></div>
             <div class="skeleton-row"></div>
             <div class="skeleton-row"></div>

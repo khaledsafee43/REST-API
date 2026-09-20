@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Khaled Saifee",
+    "email": "saifeekhaled1212@gmail.com",
+    "age": "25",
+    "userRoll": "admin",
+    "createdAt": "9/20/2026"
+  },
+  {
+    "id": 2,
+    "name": "undefined",
+    "email": "saifeekhaled1212@gmail.com",
+    "age": "24",
+    "userRoll": "user",
+    "createdAt": "9/20/2026"
+  }
+]
