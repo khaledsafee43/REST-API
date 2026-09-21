@@ -6,6 +6,8 @@ const userForm = document.getElementById("userForm");
 const searchInput = document.getElementById("searchInput");
 
 let users = [];
+let editId = null;
+
 
 // ====================
 // READ - Show Users

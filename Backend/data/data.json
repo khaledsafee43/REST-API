@@ -14,5 +14,13 @@
     "age": "24",
     "userRoll": "user",
     "createdAt": "9/20/2026"
+  },
+  {
+    "id": 3,
+    "name": "Mohammad Mohammadi",
+    "email": "saifeekhaled1212@gmail.com",
+    "age": "24",
+    "userRoll": "admin",
+    "createdAt": "9/21/2026"
   }
 ]
